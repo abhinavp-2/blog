@@ -18,6 +18,11 @@ const app = express() ;
 app.use(express.json())
 app.use(cors())
 
+app.get('/', (req, res) => {
+    res.send("GET Request Called")
+})
+
+
 app.use("/",IndexRoute)
 
 app.use(customErrorHandler)
